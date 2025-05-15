@@ -1,19 +1,27 @@
-(* Inductive list': (list nat) -> Prop := *)
-(* | nat_cons: forall (x : nat) (y: list nat), list' y  ->  list' (cons x y) *)
-(* | nat_nil: list' nil. *)
+Inductive nat' : forall x: nat, Prop :=
+| zero_nat': nat' 0
+| succ_nat': forall x, nat' x -> nat' (x + 1).
 
+Inductive list': (list nat) -> Prop := 
+| nat_cons: forall (x : nat) (y: list nat), nat' x -> list' y  ->  list' (cons x y) 
+| nat_nil: list' nil.
 
-Axiom Obstacle: Type -> Prop.
-Axiom Rain: Type -> Prop.
-Axiom Fog: Type -> Prop.
+Let is_list_zero_nil := nat_cons 0 nil zero_nat' nat_nil.
 
-Inductive unsafe: Type -> Prop :=
-| Unsafe_from_obstacle : forall o, Obstacle o -> unsafe o
-| Unsafe_from_rain_fog: forall r f, Rain r -> Fog f -> unsafe (r * f)%type.
+Check is_list_zero_nil.
 
+(* nat(zero). *)
+(* nat(s(X)) :- nat(X). *)
 
-Lemma unsafe_query: forall o, Obstacle o -> unsafe o.
-Proof.
-  intros o.
-  apply Unsafe_from_obstacle.
-Qed.
+(* list(cons(X,Y)) :- nat(X), list(Y) *)
+(* list(nil ).*)
+  (* ?- list(cons(zero,nil)). *)
+
+(* Constants *)
+
+Inductive eventType: Type := Obstacle | Fog.
+
+Inductive level: Type := None | Medium | Severe.
+
+Inductive event : eventType -> level -> Prop :=
+    | Event_fog_none: forall e l, obstacle 
