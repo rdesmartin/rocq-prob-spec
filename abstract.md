@@ -21,3 +21,4 @@ Problog is a probabilistic logic programming language, that we propose to use
 for automating the discovery of probabilistic properties of neuro-symbolic programs.
 We show that there is a generic procedure to lift Problog theorems to Rocq and then use Rocq's proability theory libraries 
 to reconstruct the proofs and thus reason probabilsiically about the bigger system specification.   
+
