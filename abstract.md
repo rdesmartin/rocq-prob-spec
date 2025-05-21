@@ -4,7 +4,7 @@ Abstract: Neuro-symbolic programs are defined as programs that contain Machine l
 Verifying such programs is particularly hard: "neural" and "symbolic" components require very different methods of specification and verification of safety properties. 
 In turn, this also means that they require a diversified programming language support, covering property-based training in languages such as Python,
 verification of low-level constraints on ML models in linear programming (SMT Lib) style, and finally high-level system descriptions and proofs 
-in the style of interactive theorem provers (ITP) such as Rocq, LEAN or Idris. The language Vehicle provides an interface that keeps all of these programing languages and components 
+in the style of interactive theorem provers (ITP) such as Agda, Rocq, LEAN or Idris. The language Vehicle provides an interface that keeps all of these programing languages and components 
 synchronised with respect to the ML model specification. Recently, we implemented a Vehicle backend to Rocq, with a view of enabling probabilistic reasoning about neuro-symbolic programs.  
 
 Probabilistic reasoning naturally arises in all of the above mentioned aspects of Neuro-Symbolic specifications: 
