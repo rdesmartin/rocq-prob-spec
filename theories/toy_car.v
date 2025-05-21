@@ -17,6 +17,6 @@ Lemma query_unsafe: Unsafe.
   apply (unsafe_rain_obst_medium rain obst).
   Qed.
 
-Let query_unsafe' := unsafe_rain_obst_medium rain obst.
+Definition query_unsafe' := unsafe_rain_obst_medium rain obst.
 
 Check query_unsafe'.
