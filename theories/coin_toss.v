@@ -1,5 +1,7 @@
+(*From Corelib Require Import ssreflect ssrfun ssrbool.*)
 From HB Require Import structures.
 From mathcomp Require Import all_ssreflect.
+Require Import mathcomp.ssreflect.ssrbool.
 From mathcomp Require Import ssralg poly ssrnum ssrint interval archimedean finmap.
 From mathcomp Require Import functions cardinality fsbigop.
 From mathcomp Require Import exp numfun lebesgue_measure lebesgue_integral.

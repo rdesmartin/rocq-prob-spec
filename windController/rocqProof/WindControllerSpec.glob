@@ -1,112 +1,108 @@
-DIGEST 053a07eedc6bb59ae02e6b541cb31fe4
+DIGEST 51f4f28ccd882aa1090bb7360436fa19
 FWindControllerSpec
-R43:65 mathcomp.algebra.ssralg <> <> lib
-R83:108 mathcomp.ssreflect.ssrbool <> <> lib
-R126:151 mathcomp.ssreflect.fintype <> <> lib
-R169:193 mathcomp.ssreflect.ssrnat <> <> lib
-R211:232 mathcomp.ssreflect.seq <> <> lib
-R250:273 mathcomp.ssreflect.tuple <> <> lib
-R291:312 mathcomp.algebra.zmodp <> <> lib
-R330:349 mathcomp.reals.reals <> <> lib
-R367:390 mathcomp.ssreflect.order <> <> lib
-R408:421 vehicle.tensor <> <> lib
-ax 482:482 <> R
-R486:493 mathcomp.reals.reals Real.Exports realType abbrev
-def 508:518 <> InputVector
-R530:535 vehicle.tensor <> tensor def
-R537:537 WindControllerSpec <> R defax
-R543:546 mathcomp.ssreflect.seq <> ::seq_scope:x_'::'_x not
-R547:549 Coq.Init.Datatypes <> nil constr
-def 565:577 <> currentSensor
-R581:583 mathcomp.ssreflect.fintype <> :::'''I_'_x not
-def 603:616 <> previousSensor
-R620:622 mathcomp.ssreflect.fintype <> :::'''I_'_x not
-def 643:654 <> OutputVector
-R666:671 vehicle.tensor <> tensor def
-R673:673 WindControllerSpec <> R defax
-R679:682 mathcomp.ssreflect.seq <> ::seq_scope:x_'::'_x not
-R683:685 Coq.Init.Datatypes <> nil constr
-def 701:708 <> velocity
-R712:714 mathcomp.ssreflect.fintype <> :::'''I_'_x not
-ax 734:743 <> controller
-R758:761 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R747:757 WindControllerSpec <> InputVector def
-R762:773 WindControllerSpec <> OutputVector def
-def 788:796 <> normalise
-R803:813 WindControllerSpec <> InputVector def
-binder 799:799 <> x:5
-R818:828 WindControllerSpec <> InputVector def
-R833:839 vehicle.tensor <> foreach def
-binder 846:846 <> i:6
-R851:851 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
-R870:873 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
-R860:863 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
-R869:869 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
-R852:855 mathcomp.ssreflect.tuple <> tnth def
-R859:859 WindControllerSpec <> i:6 var
-R857:857 WindControllerSpec <> x:5 var
-R868:868 WindControllerSpec <> R defax
-def 891:899 <> safeInput
-R906:916 WindControllerSpec <> InputVector def
-binder 902:902 <> x:7
-binder 940:940 <> i:8
-R959:962 mathcomp.ssreflect.order Order.POSyntax ::order_scope:x_'<='_x_'<='_x not
-R971:975 mathcomp.ssreflect.order Order.POSyntax ::order_scope:x_'<='_x_'<='_x not
-R989:989 mathcomp.ssreflect.order Order.POSyntax ::order_scope:x_'<='_x_'<='_x not
-R943:944 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
-R958:958 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
-R957:957 WindControllerSpec <> R defax
-R948:950 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
-R963:966 mathcomp.ssreflect.tuple <> tnth def
-R970:970 WindControllerSpec <> i:8 var
-R968:968 WindControllerSpec <> x:7 var
-R963:966 mathcomp.ssreflect.tuple <> tnth def
-R970:970 WindControllerSpec <> i:8 var
-R968:968 WindControllerSpec <> x:7 var
-R988:988 WindControllerSpec <> R defax
-R979:981 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
-def 1004:1013 <> safeOutput
-R1020:1030 WindControllerSpec <> InputVector def
-binder 1016:1016 <> x:9
-R1056:1059 mathcomp.ssreflect.tuple <> tnth def
-R1088:1095 WindControllerSpec <> velocity def
-R1062:1071 WindControllerSpec <> controller defax
-R1074:1082 WindControllerSpec <> normalise def
-R1084:1084 WindControllerSpec <> x:9 var
-binder 1051:1051 <> y:10
-R1120:1122 mathcomp.ssreflect.order Order.POSyntax ::order_scope:x_'<'_x_'<'_x not
-R1175:1178 mathcomp.ssreflect.order Order.POSyntax ::order_scope:x_'<'_x_'<'_x not
-R1192:1192 mathcomp.ssreflect.order Order.POSyntax ::order_scope:x_'<'_x_'<'_x not
-R1104:1105 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
-R1119:1119 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
-R1118:1118 WindControllerSpec <> R defax
-R1109:1111 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
-R1151:1153 mathcomp.algebra.ssralg <> ::ring_scope:x_'-'_x not
-R1124:1126 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
-R1123:1123 WindControllerSpec <> y:10 var
-R1128:1130 mathcomp.algebra.ssralg <> ::ring_scope:x_'*'_x not
-R1131:1134 mathcomp.ssreflect.tuple <> tnth def
-R1138:1150 WindControllerSpec <> currentSensor def
-R1136:1136 WindControllerSpec <> x:9 var
-R1154:1157 mathcomp.ssreflect.tuple <> tnth def
-R1161:1174 WindControllerSpec <> previousSensor def
-R1159:1159 WindControllerSpec <> x:9 var
-R1151:1153 mathcomp.algebra.ssralg <> ::ring_scope:x_'-'_x not
-R1124:1126 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
-R1123:1123 WindControllerSpec <> y:10 var
-R1128:1130 mathcomp.algebra.ssralg <> ::ring_scope:x_'*'_x not
-R1131:1134 mathcomp.ssreflect.tuple <> tnth def
-R1138:1150 WindControllerSpec <> currentSensor def
-R1136:1136 WindControllerSpec <> x:9 var
-R1154:1157 mathcomp.ssreflect.tuple <> tnth def
-R1161:1174 WindControllerSpec <> previousSensor def
-R1159:1159 WindControllerSpec <> x:9 var
-R1191:1191 WindControllerSpec <> R defax
-R1182:1184 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
-ax 1202:1205 <> safe
-binder 1216:1216 <> x:11
-R1230:1233 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R1219:1227 WindControllerSpec <> safeInput def
-R1229:1229 WindControllerSpec <> x:11 var
-R1234:1243 WindControllerSpec <> safeOutput def
-R1245:1245 WindControllerSpec <> x:11 var
+R50:59 HB.structures <> <> lib
+R91:103 mathcomp.ssreflect.all_ssreflect <> <> lib
+R121:143 mathcomp.algebra.ssralg <> <> lib
+R374:395 mathcomp.algebra.zmodp <> <> lib
+R413:432 mathcomp.reals.reals <> <> lib
+R495:508 vehicle.tensor <> <> lib
+ax 589:589 <> R
+R593:600 mathcomp.reals.reals Real.Exports realType abbrev
+def 615:625 <> InputVector
+R637:642 vehicle.tensor <> tensor def
+R644:644 WindControllerSpec <> R defax
+R650:653 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R654:656 Coq.Init.Datatypes <> nil constr
+def 672:684 <> currentSensor
+R688:690 mathcomp.boot.fintype <> :::'''I_'_x not
+def 710:723 <> previousSensor
+R727:729 mathcomp.boot.fintype <> :::'''I_'_x not
+def 750:761 <> OutputVector
+R773:778 vehicle.tensor <> tensor def
+R780:780 WindControllerSpec <> R defax
+R786:789 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R790:792 Coq.Init.Datatypes <> nil constr
+def 808:815 <> velocity
+R819:821 mathcomp.boot.fintype <> :::'''I_'_x not
+ax 841:850 <> controller
+R865:868 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R854:864 WindControllerSpec <> InputVector def
+R869:880 WindControllerSpec <> OutputVector def
+def 895:903 <> normalise
+R910:920 WindControllerSpec <> InputVector def
+binder 906:906 <> x:5
+R925:935 WindControllerSpec <> InputVector def
+R940:946 vehicle.tensor <> foreach def
+binder 953:953 <> i:6
+R958:958 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
+R977:980 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
+R967:970 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
+R976:976 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
+R959:962 mathcomp.boot.tuple <> tnth def
+R966:966 WindControllerSpec <> i:6 var
+R964:964 WindControllerSpec <> x:5 var
+R975:975 WindControllerSpec <> R defax
+def 998:1006 <> safeInput
+R1013:1023 WindControllerSpec <> InputVector def
+binder 1009:1009 <> x:7
+binder 1047:1047 <> i:8
+R1066:1069 mathcomp.order.preorder Order.PreOSyntax ::order_scope:x_'<='_x_'<='_x not
+R1078:1082 mathcomp.order.preorder Order.PreOSyntax ::order_scope:x_'<='_x_'<='_x not
+R1096:1096 mathcomp.order.preorder Order.PreOSyntax ::order_scope:x_'<='_x_'<='_x not
+R1050:1051 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
+R1065:1065 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
+R1064:1064 WindControllerSpec <> R defax
+R1055:1057 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
+R1070:1073 mathcomp.boot.tuple <> tnth def
+R1077:1077 WindControllerSpec <> i:8 var
+R1075:1075 WindControllerSpec <> x:7 var
+R1070:1073 mathcomp.boot.tuple <> tnth def
+R1077:1077 WindControllerSpec <> i:8 var
+R1075:1075 WindControllerSpec <> x:7 var
+R1095:1095 WindControllerSpec <> R defax
+R1086:1088 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
+def 1111:1120 <> safeOutput
+R1127:1137 WindControllerSpec <> InputVector def
+binder 1123:1123 <> x:9
+R1163:1166 mathcomp.boot.tuple <> tnth def
+R1195:1202 WindControllerSpec <> velocity def
+R1169:1178 WindControllerSpec <> controller defax
+R1181:1189 WindControllerSpec <> normalise def
+R1191:1191 WindControllerSpec <> x:9 var
+binder 1158:1158 <> y:10
+R1227:1229 mathcomp.order.preorder Order.PreOSyntax ::order_scope:x_'<'_x_'<'_x not
+R1282:1285 mathcomp.order.preorder Order.PreOSyntax ::order_scope:x_'<'_x_'<'_x not
+R1299:1299 mathcomp.order.preorder Order.PreOSyntax ::order_scope:x_'<'_x_'<'_x not
+R1211:1212 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
+R1226:1226 mathcomp.algebra.ssralg <> ::ring_scope:'-'_x not
+R1225:1225 WindControllerSpec <> R defax
+R1216:1218 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
+R1258:1260 mathcomp.algebra.ssralg <> ::ring_scope:x_'-'_x not
+R1231:1233 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
+R1230:1230 WindControllerSpec <> y:10 var
+R1235:1237 mathcomp.algebra.ssralg <> ::ring_scope:x_'*'_x not
+R1238:1241 mathcomp.boot.tuple <> tnth def
+R1245:1257 WindControllerSpec <> currentSensor def
+R1243:1243 WindControllerSpec <> x:9 var
+R1261:1264 mathcomp.boot.tuple <> tnth def
+R1268:1281 WindControllerSpec <> previousSensor def
+R1266:1266 WindControllerSpec <> x:9 var
+R1258:1260 mathcomp.algebra.ssralg <> ::ring_scope:x_'-'_x not
+R1231:1233 mathcomp.algebra.ssralg <> ::ring_scope:x_'+'_x not
+R1230:1230 WindControllerSpec <> y:10 var
+R1235:1237 mathcomp.algebra.ssralg <> ::ring_scope:x_'*'_x not
+R1238:1241 mathcomp.boot.tuple <> tnth def
+R1245:1257 WindControllerSpec <> currentSensor def
+R1243:1243 WindControllerSpec <> x:9 var
+R1261:1264 mathcomp.boot.tuple <> tnth def
+R1268:1281 WindControllerSpec <> previousSensor def
+R1266:1266 WindControllerSpec <> x:9 var
+R1298:1298 WindControllerSpec <> R defax
+R1289:1291 mathcomp.algebra.ssralg <> ::ring_scope:x_'/'_x not
+ax 1309:1312 <> safe
+binder 1323:1323 <> x:11
+R1337:1340 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1326:1334 WindControllerSpec <> safeInput def
+R1336:1336 WindControllerSpec <> x:11 var
+R1341:1350 WindControllerSpec <> safeOutput def
+R1352:1352 WindControllerSpec <> x:11 var

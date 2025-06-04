@@ -26,6 +26,12 @@ vehicle verify \
   --verifier Marabou \
   --cache examples/windController/verificationResult
 ```
+```bash
+ek19@HWLL0037:~/Research/ConferencePapers/rocq-prob-spec/windController$ vehicle verify   --specification windController.vcl   --network controller:controller.onnx --verifier Marabou --verifier-location ~/Research/Marabou/Marabou/build/Marabou
+Verifying properties:
+  safe [===========================================================] 2/2 queries
+    result: 🗸 - Marabou proved no counterexample exists
+```
 
 where the last line tells Vehicle where to write out the result of the verification
 which can then be used by Agda in the next step.

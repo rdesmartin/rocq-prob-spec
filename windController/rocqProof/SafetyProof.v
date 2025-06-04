@@ -5,12 +5,15 @@ Unset Strict Implicit.
 Unset Printing Implicit Defensive.
 Import Num.Theory GRing.
 Require Import vehicle.tensor.
+(*Require Import WindControllerSpec.*)
 
 Open Scope ring_scope.
 
 Require WindControllerSpec.
+(*Require Tensor.*)
 
 Notation R := WindControllerSpec.R.
+(*Notation R := realType.*)
 
 (* ----------------------------------------------*)
 (* Setup *)
