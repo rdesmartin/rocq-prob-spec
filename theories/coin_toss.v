@@ -199,22 +199,20 @@ Context {R : realType}.
 
 (*
 % Probabilistic facts:
-q(C) :- p(C).
-%0.6::heads(C) :- coin(C).
+0.6 :: publish(cpp); 0.2 :: publish(etaps).
 
 % Background information:
-0.6 :: p(c1).
-0.2 :: p(c2).
-%coin(c3).
+present(C) :- publish(C).
 
 % Rules:
-test :- q(c1).
-test :- q(c2).
+happy :- present(cpp).
+happy :- present(etaps).
 
 % Queries:
-query(test).
+query(happy).
 *)
-Inductive C := c1 | c2.
+
+Inductive Conference := cpp | etaps.
 
 (*
 For independent cases:
@@ -222,44 +220,46 @@ For independent cases:
     Axiom p1 : (P c1 (6/10)%R).
 *)
 
-Inductive P : C -> R -> Prop := 
-| p1 : P c1 (4/10)%R 
-| p2 : P c2 (6/10)%R. 
+Inductive Publish : Conference -> R -> Prop := 
+| p1 : Publish cpp (6/10)%R 
+| p2 : Publish etaps (2/10)%R. 
 
-Inductive Q : C -> R -> Prop := 
-| q : forall {c} {p}, P c p -> Q c p.
+Inductive Present : Conference -> R -> Prop := 
+| pre : forall {c} {p}, Publish c p -> Present c p.
 
-Inductive Test : R -> Prop := 
-| test : forall {p1} {p2}, (Q c1 p1) -> (Q c2 p2) -> Test (p1 + p2).
+Inductive Happy : R -> Prop := 
+| happy : forall {p1} {p2}, 
+            (Present cpp p1) -> (Present etaps p2) -> Happy (p1 + p2).
 
-Goal (Test (1)%R).
+Goal (Happy (8/10)%R).
 Proof.
-    rewrite (_ : (1)%R = (4/10 + 6/10)%R); last by nra.
+    rewrite (_ : (8/10)%R = (6/10 + 2/10)%R); last by nra.
     (*repeat econstructor.*)
-    apply /test.
-    - apply /q /p1.
-    - apply /q /p2.
+    apply /happy.
+    - apply /pre /p1.
+    - apply /pre /p2.
 Qed.
+
 End coin_toss.
 
 Section car.
 Context {R : realType}.
 (*
-0.99::start(car,clear); 0.01::start(car,collision).
+0.9::start(car,clear); 0.1::start(car,collision).
 0.7::trans(car,T,clear,clear); 0.3::trans(car,T,clear,collision).
-0.01::trans(car,T,collision,clear); 0.99::trans(car,T,collision,collision).
+0.2::trans(car,T,collision,clear); 0.8::trans(car,T,collision,collision).
 *)
-Inductive CarState := safe | collision.
+Inductive CarState : Prop := safe | collision.
 
 Inductive Start : CarState -> R -> Prop := 
-| start_s : Start safe (99/100)%R
-| start_c : Start collision (1/100)%R.
+| start_s : Start safe (9/10)%R
+| start_c : Start collision (1/10)%R.
 
 Inductive Transition : nat -> CarState -> CarState -> R -> Prop := 
 | trans_s_s : forall t, Transition t safe safe (7/10)%R
 | trans_s_c : forall t, Transition t safe collision (3/10)%R
-| trans_c_s : forall t, Transition t collision safe (1/100)%R
-| trans_c_c : forall t, Transition t collision collision (99/100)%R.
+| trans_c_s : forall t, Transition t collision safe (2/10)%R
+| trans_c_c : forall t, Transition t collision collision (8/10)%R.
 
 (*
 state(A,0,S) :- start(A,S).
@@ -268,18 +268,40 @@ state(A,T,S) :- T > 0, TT is T-1, state(A,TT,collision), trans(A,TT,collision,S)
 *)
 
 Inductive State : nat -> CarState -> R -> Prop :=
-| state_0 :  forall {p} cs, Start cs p -> State 0 cs p
-| state_st : forall {p1} {p2} {p3} {p4}  t cs, 
+| state_0 :  forall {p} cs, Start cs p -> State O cs p
+| state_st : forall {p1} {p2} {p3} {p4} (t : nat) cs, 
     State t safe p1 -> Transition t safe cs p2 ->
     State t collision p3 -> Transition t collision cs p4 -> 
     State (S t) cs ((p1 * p2) + (p3 * p4))%R.
 
+
 (*query(state(car,1,clear)). 0.6931 *)
-Goal (State 1 safe (6931/10000)%R).
+Lemma is_state_st : forall {p p1 p2 p3 p4: R} t cs, 
+        (p = p1 * p2 + p3 * p4)%R -> 
+        State t safe p1 -> Transition t safe cs p2 -> State t collision p3 ->
+        Transition t collision cs p4 -> State (S t) cs p.
 Proof.
-    rewrite (_ : (6931/10000 = (99/100) * (7/10) + (1/100) * (1/100)))%R; 
-    last by nra.
-    repeat econstructor.
+    by (do 7 move=> ?)=> ->; apply state_st.
+Qed.
+
+Goal (State 1 safe (65/100)%R).
+Proof.
+    rewrite (_ : 65/100 = (9/10) * (7/10) + (1/10) * (2/10))%R; last by nra.
+    apply /state_st.
+    - apply /state_0 /start_s.
+    - apply /trans_s_s.
+    - apply /state_0 /start_c.
+    - apply /trans_c_s.
+Qed.
+
+Goal (State 0 safe (9/10)%R).
+Proof.
+    by econstructor; apply /start_s.
+Qed.
+
+Goal (State 7 safe (517/1280)%R).
+Proof.
+    apply /is_state_st; repeat econstructor; nra.
 Qed.
 
 End car.
