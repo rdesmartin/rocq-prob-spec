@@ -45,6 +45,8 @@ From mathcomp Require Import all_ssreflect ssralg ssrint ssrnum lra.
 Section car_crash.
 Context d {A : measurableType d} {R : realType} {P : probability A R}.
 
+Variable controller : R -> R -> R. 
+
 Inductive Obstacle : Type := o1 | o2.
 Inductive Prob (p : R) : Prop :=
   prob : Prob p.

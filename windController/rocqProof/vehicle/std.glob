@@ -1,0 +1,130 @@
+DIGEST 97906acb1180b8fb38c4cb459530f4f5
+Fstd
+R29:31 mathcomp.boot.seq <> <> lib
+R33:39 mathcomp.boot.fintype <> <> lib
+R41:46 mathcomp.boot.eqtype <> <> lib
+R48:52 mathcomp.reals.reals <> <> lib
+R54:60 mathcomp.boot.ssrbool <> <> lib
+R62:66 mathcomp.order.order <> <> lib
+R97:102 vehicle.tensor <> <> lib
+def 183:194 <> forallInList
+binder 197:197 <> A:1
+R206:209 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R205:205 std <> A:1 var
+binder 201:201 <> f:2
+R221:223 mathcomp.boot.seq <> seq abbrev
+R225:225 std <> A:1 var
+binder 217:217 <> s:3
+R230:234 mathcomp.boot.seq <> foldr def
+R246:248 mathcomp.boot.seq <> map def
+R252:252 std <> s:3 var
+R250:250 std <> f:2 var
+R240:243 Coq.Init.Logic <> True ind
+R236:238 Coq.Init.Logic <> and ind
+def 268:279 <> existsInList
+binder 282:282 <> A:4
+R291:294 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R290:290 std <> A:4 var
+binder 286:286 <> f:5
+R306:308 mathcomp.boot.seq <> seq abbrev
+R310:310 std <> A:4 var
+binder 302:302 <> s:6
+R316:320 mathcomp.boot.seq <> foldr def
+R332:334 mathcomp.boot.seq <> map def
+R338:338 std <> s:6 var
+R336:336 std <> f:5 var
+R325:329 Coq.Init.Logic <> False ind
+R322:323 Coq.Init.Logic <> or ind
+def 354:364 <> existsIndex
+binder 367:367 <> n:7
+R379:382 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R375:377 mathcomp.boot.fintype <> :::'''I_'_x not
+R378:378 std <> n:7 var
+binder 371:371 <> f:8
+R392:398 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R400:401 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 399:399 <> x:9
+R402:402 std <> f:8 var
+R404:404 std <> x:9 var
+def 419:429 <> forallIndex
+binder 432:432 <> n:10
+R444:447 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R440:442 mathcomp.boot.fintype <> :::'''I_'_x not
+R443:443 std <> n:10 var
+binder 436:436 <> f:11
+binder 464:464 <> x:12
+R467:467 std <> f:11 var
+R469:469 std <> x:12 var
+sec 481:486 <> Tensor
+var  499:499 Tensor R
+R503:510 mathcomp.reals.reals Real.Exports realType abbrev
+var  523:524 Tensor ds
+R528:530 mathcomp.boot.seq <> seq abbrev
+R532:534 Coq.Init.Datatypes <> nat ind
+def 550:567 <> eqRatTensorReduced
+R578:583 vehicle.tensor <> tensor def
+R585:585 std <> Tensor.R var
+R587:588 std <> Tensor.ds var
+binder 570:571 <> xs:15
+binder 573:574 <> ys:16
+R594:602 vehicle.tensor <> reduceAnd def
+R605:611 vehicle.tensor <> zipWith def
+R622:623 std <> ys:16 var
+R619:620 std <> xs:15 var
+R613:617 mathcomp.boot.eqtype <> eq_op def
+def 638:655 <> neRatTensorReduced
+R666:671 vehicle.tensor <> tensor def
+R673:673 std <> Tensor.R var
+R675:676 std <> Tensor.ds var
+binder 658:659 <> xs:17
+binder 661:662 <> ys:18
+R683:686 Coq.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R711:711 Coq.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R687:704 std <> eqRatTensorReduced def
+R706:707 std <> xs:17 var
+R709:710 std <> ys:18 var
+def 725:742 <> leRatTensorReduced
+R753:758 vehicle.tensor <> tensor def
+R760:760 std <> Tensor.R var
+R762:763 std <> Tensor.ds var
+binder 745:746 <> xs:19
+binder 748:749 <> ys:20
+R769:777 vehicle.tensor <> reduceAnd def
+R780:786 vehicle.tensor <> zipWith def
+R800:801 std <> ys:20 var
+R797:798 std <> xs:19 var
+R788:795 mathcomp.order.preorder Order le def
+def 816:833 <> ltRatTensorReduced
+R844:849 vehicle.tensor <> tensor def
+R851:851 std <> Tensor.R var
+R853:854 std <> Tensor.ds var
+binder 836:837 <> xs:21
+binder 839:840 <> ys:22
+R860:868 vehicle.tensor <> reduceAnd def
+R871:877 vehicle.tensor <> zipWith def
+R891:892 std <> ys:22 var
+R888:889 std <> xs:21 var
+R879:886 mathcomp.order.preorder Order lt def
+def 907:924 <> geRatTensorReduced
+R935:940 vehicle.tensor <> tensor def
+R942:942 std <> Tensor.R var
+R944:945 std <> Tensor.ds var
+binder 927:928 <> xs:23
+binder 930:931 <> ys:24
+R951:959 vehicle.tensor <> reduceAnd def
+R962:968 vehicle.tensor <> zipWith def
+R982:983 std <> ys:24 var
+R979:980 std <> xs:23 var
+R970:977 mathcomp.order.preorder Order ge def
+def 998:1015 <> gtRatTensorReduced
+R1026:1031 vehicle.tensor <> tensor def
+R1033:1033 std <> Tensor.R var
+R1035:1036 std <> Tensor.ds var
+binder 1018:1019 <> xs:25
+binder 1021:1022 <> ys:26
+R1042:1050 vehicle.tensor <> reduceAnd def
+R1053:1059 vehicle.tensor <> zipWith def
+R1073:1074 std <> ys:26 var
+R1070:1071 std <> xs:25 var
+R1061:1068 mathcomp.order.preorder Order gt def
+R1083:1088 std Tensor <> sec

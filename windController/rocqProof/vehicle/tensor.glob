@@ -1,0 +1,349 @@
+DIGEST 5bc89fa2daa2a119930f2b9b0e6e8e3a
+Ftensor
+R29:34 mathcomp.algebra.ssralg <> <> lib
+R36:41 mathcomp.boot.ssrfun <> <> lib
+R43:45 mathcomp.boot.seq <> <> lib
+R47:51 mathcomp.boot.tuple <> <> lib
+R53:59 mathcomp.boot.fintype <> <> lib
+R61:65 mathcomp.reals.reals <> <> lib
+R67:71 mathcomp.order.order <> <> lib
+def 196:201 <> tensor
+binder 204:204 <> A:1
+R223:226 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R216:218 mathcomp.boot.seq <> seq abbrev
+R220:222 Coq.Init.Datatypes <> nat ind
+R240:244 mathcomp.boot.seq <> foldr def
+R255:255 tensor <> A:1 var
+R246:253 mathcomp.boot.tuple <> tuple_of rec
+def 270:278 <> tensor_of
+binder 281:281 <> A:2
+R287:290 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R286:286 tensor <> A:2 var
+R291:296 tensor <> tensor def
+R298:298 tensor <> A:2 var
+R300:303 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R308:309 Coq.ssr.ssrfun <> id abbrev
+def 324:328 <> stack
+binder 331:331 <> A:3
+binder 333:333 <> d:4
+R361:364 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R339:360 mathcomp.boot.tuple <> ::type_scope:x_'.-tuple' not
+R338:338 tensor <> d:4 var
+R348:353 tensor <> tensor def
+R355:355 tensor <> A:3 var
+R357:359 Coq.Init.Datatypes <> nil constr
+R365:370 tensor <> tensor def
+R372:372 tensor <> A:3 var
+R376:379 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R375:375 tensor <> d:4 var
+R380:382 Coq.Init.Datatypes <> nil constr
+R388:389 Coq.ssr.ssrfun <> id abbrev
+def 404:410 <> unstack
+binder 413:413 <> A:5
+binder 415:415 <> d:6
+R439:442 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R420:425 tensor <> tensor def
+R427:427 tensor <> A:5 var
+R431:434 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R430:430 tensor <> d:6 var
+R435:437 Coq.Init.Datatypes <> nil constr
+R444:465 mathcomp.boot.tuple <> ::type_scope:x_'.-tuple' not
+R443:443 tensor <> d:6 var
+R453:458 tensor <> tensor def
+R460:460 tensor <> A:5 var
+R462:464 Coq.Init.Datatypes <> nil constr
+R470:471 Coq.ssr.ssrfun <> id abbrev
+def 486:492 <> foreach
+binder 495:495 <> A:7
+binder 497:497 <> d:8
+R509:512 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R505:507 mathcomp.boot.fintype <> :::'''I_'_x not
+R508:508 tensor <> d:8 var
+R513:518 tensor <> tensor def
+R520:520 tensor <> A:7 var
+R522:525 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+binder 501:501 <> f:9
+R530:535 tensor <> tensor def
+R537:537 tensor <> A:7 var
+R540:543 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R545:545 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R544:544 tensor <> d:8 var
+R556:562 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+R566:568 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+R570:572 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+R574:574 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+R573:573 tensor <> d:8 var
+binder 569:569 <> i:10
+R563:563 tensor <> f:9 var
+R565:565 tensor <> i:10 var
+def 587:591 <> const
+binder 594:594 <> A:11
+R602:602 tensor <> A:11 var
+binder 598:598 <> v:12
+R611:614 Coq.Init.Datatypes <> list ind
+R616:618 Coq.Init.Datatypes <> nat ind
+binder 606:607 <> ds:13
+R623:628 tensor <> tensor def
+R630:630 tensor <> A:11 var
+R632:633 tensor <> ds:13 var
+R648:649 tensor <> ds:13 var
+R662:665 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R670:670 tensor <> v:12 var
+R679:682 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R689:695 tensor <> foreach def
+R698:703 Coq.ssr.ssrfun <> ::function_scope:'fun'_'=>'_x not
+R704:708 tensor <> const:14 def
+R712:713 tensor <> ds:13 var
+R710:710 tensor <> v:12 var
+def 741:743 <> map
+binder 746:746 <> A:16
+binder 748:748 <> B:17
+binder 750:751 <> ds:18
+R760:763 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R759:759 tensor <> A:16 var
+R764:764 tensor <> B:17 var
+binder 755:755 <> f:19
+R780:783 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R769:774 tensor <> tensor def
+R776:776 tensor <> A:16 var
+R778:779 tensor <> ds:18 var
+R784:789 tensor <> tensor def
+R791:791 tensor <> B:17 var
+R793:794 tensor <> ds:18 var
+R809:810 tensor <> ds:18 var
+R823:826 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R831:831 tensor <> f:19 var
+R840:843 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R850:858 mathcomp.boot.tuple <> map_tuple canonstruc
+R861:863 tensor <> map:20 def
+R865:865 tensor <> f:19 var
+def 887:889 <> zip
+binder 892:892 <> A:22
+binder 894:894 <> B:23
+binder 896:897 <> ds:24
+R913:916 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R902:907 tensor <> tensor def
+R909:909 tensor <> A:22 var
+R911:912 tensor <> ds:24 var
+R928:931 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R917:922 tensor <> tensor def
+R924:924 tensor <> B:23 var
+R926:927 tensor <> ds:24 var
+R932:937 tensor <> tensor def
+R941:943 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R940:940 tensor <> A:22 var
+R944:944 tensor <> B:23 var
+R947:948 tensor <> ds:24 var
+R963:964 tensor <> ds:24 var
+R977:980 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R985:988 Coq.Init.Datatypes <> pair constr
+R997:1000 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+binder 1011:1012 <> xs:27
+binder 1014:1015 <> ys:28
+R1020:1026 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+R1054:1056 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+R1058:1060 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+R1062:1062 mathcomp.boot.tuple <> ::form_scope:'['_'tuple'_x_'|'_x_'<'_x_']' not
+binder 1057:1057 <> i:29
+R1027:1029 tensor <> zip:25 def
+R1044:1047 mathcomp.boot.tuple <> tnth def
+R1052:1052 tensor <> i:29 var
+R1049:1050 tensor <> ys:28 var
+R1032:1035 mathcomp.boot.tuple <> tnth def
+R1040:1040 tensor <> i:29 var
+R1037:1038 tensor <> xs:27 var
+def 1085:1091 <> zipWith
+binder 1094:1094 <> A:30
+binder 1096:1096 <> B:31
+binder 1098:1098 <> C:32
+binder 1100:1101 <> ds:33
+R1110:1113 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1109:1109 tensor <> A:30 var
+R1115:1118 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1114:1114 tensor <> B:31 var
+R1119:1119 tensor <> C:32 var
+binder 1105:1105 <> f:34
+R1128:1133 tensor <> tensor def
+R1135:1135 tensor <> A:30 var
+R1137:1138 tensor <> ds:33 var
+binder 1123:1124 <> xs:35
+R1147:1152 tensor <> tensor def
+R1154:1154 tensor <> B:31 var
+R1156:1157 tensor <> ds:33 var
+binder 1142:1143 <> ys:36
+R1162:1167 tensor <> tensor def
+R1169:1169 tensor <> C:32 var
+R1171:1172 tensor <> ds:33 var
+R1181:1183 tensor <> map def
+R1198:1200 tensor <> zip def
+R1205:1206 tensor <> ys:36 var
+R1202:1203 tensor <> xs:35 var
+R1186:1192 Coq.Init.Datatypes <> uncurry def
+R1194:1194 tensor <> f:34 var
+def 1220:1225 <> toList
+binder 1228:1228 <> A:37
+binder 1230:1231 <> ds:38
+R1247:1250 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1236:1241 tensor <> tensor def
+R1243:1243 tensor <> A:37 var
+R1245:1246 tensor <> ds:38 var
+R1251:1254 Coq.Init.Datatypes <> list ind
+R1256:1256 tensor <> A:37 var
+R1271:1272 tensor <> ds:38 var
+R1285:1288 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R1302:1302 tensor <> A:37 var
+binder 1298:1298 <> t:41
+R1308:1311 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R1313:1313 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R1312:1312 tensor <> t:41 var
+R1322:1325 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+binder 1336:1336 <> t:42
+R1341:1347 mathcomp.boot.seq <> flatten def
+R1350:1356 mathcomp.boot.seq <> map def
+R1365:1365 tensor <> t:42 var
+R1358:1363 tensor <> toList:39 def
+def 1389:1394 <> reduce
+binder 1397:1397 <> A:43
+binder 1399:1399 <> B:44
+binder 1401:1402 <> ds:45
+R1411:1414 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1410:1410 tensor <> A:43 var
+R1416:1419 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1415:1415 tensor <> B:44 var
+R1420:1420 tensor <> B:44 var
+binder 1406:1406 <> f:46
+R1428:1428 tensor <> B:44 var
+binder 1424:1424 <> a:47
+R1436:1441 tensor <> tensor def
+R1443:1443 tensor <> A:43 var
+R1445:1446 tensor <> ds:45 var
+binder 1432:1432 <> t:48
+R1451:1451 tensor <> B:44 var
+R1456:1460 mathcomp.boot.seq <> foldr def
+R1467:1472 tensor <> toList def
+R1474:1474 tensor <> t:48 var
+R1464:1464 tensor <> a:47 var
+R1462:1462 tensor <> f:46 var
+def 1489:1497 <> reduceAnd
+binder 1500:1501 <> ds:49
+R1520:1523 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1506:1511 tensor <> tensor def
+R1513:1516 Coq.Init.Datatypes <> bool ind
+R1518:1519 tensor <> ds:49 var
+R1524:1527 Coq.Init.Datatypes <> bool ind
+R1532:1537 tensor <> reduce def
+R1544:1547 Coq.Init.Datatypes <> true constr
+R1539:1542 Coq.Init.Datatypes <> andb def
+def 1561:1568 <> reduceOr
+binder 1571:1572 <> ds:50
+R1591:1594 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1577:1582 tensor <> tensor def
+R1584:1587 Coq.Init.Datatypes <> bool ind
+R1589:1590 tensor <> ds:50 var
+R1595:1598 Coq.Init.Datatypes <> bool ind
+R1603:1608 tensor <> reduce def
+R1614:1618 Coq.Init.Datatypes <> false constr
+R1610:1612 Coq.Init.Datatypes <> orb def
+def 1633:1641 <> pointwise
+binder 1644:1644 <> A:51
+binder 1646:1646 <> B:52
+binder 1648:1649 <> ds:53
+R1658:1661 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1657:1657 tensor <> A:51 var
+R1663:1666 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1662:1662 tensor <> B:52 var
+binder 1653:1653 <> f:54
+R1679:1684 tensor <> tensor def
+R1686:1686 tensor <> A:51 var
+R1688:1689 tensor <> ds:53 var
+binder 1674:1675 <> xs:55
+R1698:1703 tensor <> tensor def
+R1705:1705 tensor <> B:52 var
+R1707:1708 tensor <> ds:53 var
+binder 1693:1694 <> ys:56
+R1725:1730 tensor <> reduce def
+R1742:1748 tensor <> zipWith def
+R1755:1756 tensor <> ys:56 var
+R1752:1753 tensor <> xs:55 var
+R1750:1750 tensor <> f:54 var
+R1736:1739 Coq.Init.Logic <> True ind
+R1732:1734 Coq.Init.Logic <> and ind
+sec 1769:1788 <> TensorRealOperations
+var  1825:1825 TensorRealOperations R
+R1829:1836 mathcomp.reals.reals Real.Exports realType abbrev
+var  1849:1850 TensorRealOperations ds
+R1854:1857 Coq.Init.Datatypes <> list ind
+R1859:1861 Coq.Init.Datatypes <> nat ind
+abbrev 1874:1881 <> zipWithR
+R1888:1894 tensor <> zipWith def
+R1896:1896 tensor <> TensorRealOperations.R var
+R1898:1898 tensor <> TensorRealOperations.R var
+R1900:1900 tensor <> TensorRealOperations.R var
+R1902:1903 tensor <> TensorRealOperations.ds var
+abbrev 1931:1934 <> mapR
+R1941:1943 tensor <> map def
+R1945:1945 tensor <> TensorRealOperations.R var
+R1947:1947 tensor <> TensorRealOperations.R var
+R1949:1950 tensor <> TensorRealOperations.ds var
+def 1981:1984 <> addt
+R1989:1996 tensor <> zipWithR abbrev
+R1998:2006 mathcomp.algebra.ssralg Dummy.GRing add def
+def 2020:2023 <> subt
+R2028:2035 tensor <> zipWithR abbrev
+binder 2042:2042 <> x:59
+binder 2044:2044 <> y:60
+R2049:2057 mathcomp.algebra.ssralg Dummy.GRing add def
+R2062:2070 mathcomp.algebra.ssralg Dummy.GRing opp def
+R2072:2072 tensor <> y:60 var
+R2059:2059 tensor <> x:59 var
+def 2088:2091 <> mult
+R2096:2103 tensor <> zipWithR abbrev
+R2105:2113 mathcomp.algebra.ssralg GRing mul def
+def 2127:2130 <> oppt
+R2135:2138 tensor <> mapR abbrev
+R2140:2148 mathcomp.algebra.ssralg Dummy.GRing opp def
+def 2162:2165 <> maxt
+R2170:2177 tensor <> zipWithR abbrev
+R2179:2187 mathcomp.order.preorder Order max def
+def 2201:2204 <> mint
+R2209:2216 tensor <> zipWithR abbrev
+R2218:2226 mathcomp.order.preorder Order min def
+def 2240:2243 <> invt
+R2248:2251 tensor <> mapR abbrev
+R2253:2261 mathcomp.algebra.ssralg GRing inv def
+def 2281:2294 <> tensor_of_real
+R2300:2308 tensor <> tensor_of def
+R2310:2310 tensor <> TensorRealOperations.R var
+def 2325:2333 <> reduceAdd
+binder 2336:2337 <> ds:61
+R2353:2356 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2342:2347 tensor <> tensor def
+R2349:2349 tensor <> TensorRealOperations.R var
+R2351:2352 tensor <> ds:61 var
+R2357:2357 tensor <> TensorRealOperations.R var
+R2362:2367 tensor <> reduce def
+R2369:2377 mathcomp.algebra.ssralg Dummy.GRing add def
+def 2393:2401 <> reduceMul
+binder 2404:2405 <> ds:62
+R2421:2424 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2410:2415 tensor <> tensor def
+R2417:2417 tensor <> TensorRealOperations.R var
+R2419:2420 tensor <> ds:62 var
+R2425:2425 tensor <> TensorRealOperations.R var
+R2430:2435 tensor <> reduce def
+R2437:2445 mathcomp.algebra.ssralg GRing mul def
+R2455:2474 tensor TensorRealOperations <> sec
+R2501:2504 tensor <> addt def
+not 2487:2487 <> ::tensor_scope:x_'+%t'_x
+R2564:2567 tensor <> mult def
+not 2550:2550 <> ::tensor_scope:x_'*%t'_x
+R2626:2629 tensor <> oppt def
+not 2614:2614 <> ::tensor_scope:'-%t'_x
+R2686:2689 tensor <> addt def
+R2694:2697 tensor <> oppt def
+not 2672:2672 <> ::tensor_scope:x_'-%t'_x
+R2756:2759 tensor <> invt def
+not 2742:2742 <> ::tensor_scope:x_'^-1%t'
+R2803:2806 tensor <> mult def
+R2811:2814 tensor <> invt def
+not 2789:2789 <> ::tensor_scope:x_'/%t'_x
